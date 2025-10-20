@@ -1,0 +1,34 @@
+package primos;
+
+import java.util.Scanner;
+import java.util.List;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        int n;
+        
+        Scanner ler = new Scanner(System.in);
+        
+        System.out.println("Digite um número inteiro meior que 1: ");
+        
+        while(true){
+            n = ler.nextInt();
+            if(n <= 1){
+                System.out.println("ERRO!");
+                System.out.println("Digite um núemro maior que 1: ");
+            }else{
+                break;
+            }
+        }
+        
+        Linear lin = new Linear();
+        
+        List<Integer> resposta = lin.calcular(n);
+        
+        System.out.println("Números primos até " + n + ": " + resposta);
+        
+        
+        ler.close();
+    }
+}
