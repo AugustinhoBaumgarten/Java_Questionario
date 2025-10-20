@@ -23,11 +23,14 @@ public class Principal {
         }
         
         Linear lin = new Linear();
+        Recursivo rec = new Recursivo();
         
         List<Integer> resposta = lin.calcular(n);
+        List<Integer> respostaRec = rec.calcular(n);
         
-        System.out.println("Números primos até " + n + ": " + resposta);
-        
+        System.out.println("Números primos(Linear) até " + n + ": " + resposta);
+        System.out.println("Números primos(Recursivos) até " + n + ": " + respostaRec);
+
         
         ler.close();
     }
